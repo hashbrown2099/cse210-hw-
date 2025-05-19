@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
+        Console.Write("What is your favorite number? ");
+string userInput = Console.ReadLine();
+int number = int.Parse(userInput);
     }
 }
