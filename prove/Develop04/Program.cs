@@ -1,14 +1,15 @@
 using System;                       
 using System.Collections.Generic;   
 using System.Threading;             
-//aaron james 
+//aaron james  
 // the extra work for this assigment is including explanation for the code 
 
 //  ABSTRACT CLASS : serves as the base class for all the mental activitites , 
 
 abstract class Activity
 // This is an abstract class. It defines a "template" for all mindfulness activities.
-// cannot do: new Activity()).
+// 
+//
 // It is designed to be inherited by child classes 
 // used https://claude.ai/chat/71c72192-698d-4676-9fd5-023a21cb6a0b for debugging and reorganization of the code it also fixed errors with some of my classes 
 //https://www.youtube.com/watch?v=is9xPX0GTuk
@@ -222,7 +223,7 @@ class SecretActivity : Activity
     {
         Random rand = new Random();
         Console.WriteLine("\n Secret quote:\n");
-        Console.WriteLine($"\"{quotes[rand.Next(quotes.Count)]}\"");   // Show a random quote
+        Console.WriteLine($"\"{quotes[rand.Next(quotes.Count)]}\"");   // Shows a random quote
         Console.WriteLine();
         ShowSpinner(duration);                                       
     }
@@ -247,10 +248,10 @@ class Program
             Console.WriteLine("5. Quit");
             Console.Write("Choose an option: ");
 
-            string choice = Console.ReadLine();  // Get user's menu choice
-            Activity activity = null;            // Base class reference
+            string choice = Console.ReadLine();  // users menu 
+            Activity activity = null;            
 
-            // Instantiate the  child class based on the input of the person
+            //  based on the input of the person
             switch (choice)
             {
                           case "1": activity = new BreathingActivity(); break;
