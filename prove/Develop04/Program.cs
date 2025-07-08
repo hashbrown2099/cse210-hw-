@@ -2,9 +2,7 @@ using System;
 using System.Collections.Generic;   
 using System.Threading;             
 //aaron james  
-// the extra work for this assigment is including explanation for the code 
 
-//  ABSTRACT CLASS : serves as the base class for all the mental activitites , 
 
 abstract class Activity
 // This is an abstract class. It defines a "template" for all mindfulness activities.
@@ -25,10 +23,10 @@ abstract class Activity
         Console.Clear();                 
         DisplayStartMessage();          
         Console.Write("Enter the duration of the activity in seconds: ");
-        duration = int.Parse(Console.ReadLine());  // Ask user for activity time
+        duration = int.Parse(Console.ReadLine());  // Ask for activity time
 
         Console.WriteLine("Prepare to begin...");
-        ShowSpinner(3);                 // spins the spinner for 3 
+        ShowSpinner(3);                 // spins the spinner for 3 seconds at a time 
 
         Run();                          
 
@@ -40,16 +38,16 @@ abstract class Activity
     
     {
         Console.WriteLine($"\nStarting {GetType().Name}...");
-        Console.WriteLine(GetDescription()); // Get 
+        Console.WriteLine(GetDescription()); 
     }
 
     protected void DisplayEndMessage()
     
     {
         Console.WriteLine("\nWell done!");
-        ShowSpinner(2);                  //pause
+        ShowSpinner(2);                  
         Console.WriteLine($"You have completed the {GetType().Name} for {duration} seconds.");
-        ShowSpinner(3);                  //pause
+        ShowSpinner(3);                  
     }
 
     protected void ShowSpinner(int seconds)
@@ -61,8 +59,8 @@ abstract class Activity
         while (DateTime.Now < end)
         {
             Console.Write(spinner[i % 4]);     // Show spinner character
-            Thread.Sleep(250);                 // Wait 1/4 second
-            Console.Write("\b");               // Remove character
+            Thread.Sleep(250);                 
+            Console.Write("\b");               
             i++;
         }
     }
@@ -73,14 +71,14 @@ abstract class Activity
         for (int i = seconds; i > 0; i--)
         {
             Console.Write(i + " ");
-            Thread.Sleep(1000);   // 1 second
+            Thread.Sleep(1000);   /d
         }
         Console.WriteLine();
     }
 
     public abstract string GetDescription();
-    // This is an abstract method.
-    // it forces all subclasses to implement their own description.
+    // This is  abstract method.
+
 
     public abstract void Run();
    
