@@ -76,7 +76,7 @@ class AccountHolder
     public string Username { get; set; } // user name for the account 
     public string PIN { get; set; } // the user can set the PIN
     public Dictionary<String, String> SecurityQuestions { get; set; }// This is the security questions with the answers 
-    public List<MainAccount> Accounts { get; set; } // added missing Accounts property
+    public List<MainAccount> Accounts { get; set; } 
 
     public AccountHolder()
     {
@@ -126,16 +126,16 @@ class SercuritySoftware
 
             if (choice == "1")
             {
-                OpenAccount(); // Call method to create an account
+                OpenAccount(); // Calling the  method to create an account
             }
             else if (choice == "2")
             {
-                LogIn(); // Call method to log in
+                LogIn(); // Call methods  to log in
             }
             else if (choice == "3")
             {
                 Console.WriteLine("Goodbye");
-                break; // Exit the loop and end the program
+                break; // this will exit 
             }
             else
             {
@@ -153,7 +153,7 @@ class SercuritySoftware
         Console.Write("Set a 4 digit PIN number: ");
         string pin = Console.ReadLine();
 
-        // Fixed security questions
+        // Fixed security questions sunday 
         var securityQA = new Dictionary<string, string>();
         Console.WriteLine("\nAnswer the following security questions to bypass PIN:");
         string[] questions = {
@@ -191,7 +191,7 @@ class SercuritySoftware
         Console.Write(" Enter Username:  ");
         string name = Console.ReadLine();
 
-        AccountHolder user = users.Find(u => u.Username.Equals(name, StringComparison.OrdinalIgnoreCase));//https://www.youtube.com/watch?v=nFFKfbuOvQw&t=1s  searches for stored username but disregards case sensaticity
+        AccountHolder user = users.Find(u => u.Username.Equals(name, StringComparison.OrdinalIgnoreCase));// when putting into ai it changed look up what this line does before submitting  //https://www.youtube.com/watch?v=nFFKfbuOvQw&t=1s  searches for stored username but disregards case sensaticity
 
         if (user == null)
         {
@@ -282,7 +282,7 @@ class SercuritySoftware
         Console.WriteLine("\nSelect Account: 1. Savings  2. Checking");
         string accChoice = Console.ReadLine();
 
-        MainAccount selectedAccount = accChoice == "1" ? user.Accounts[0] : user.Accounts[1]; // https://www.youtube.com/watch?v=dWsjatPhWHQ video for tenary operators 
+        MainAccount selectedAccount = accChoice == "1" ? user.Accounts[0] : user.Accounts[1]; // when editing the program ai changed the if else  this look back at it later before you sumbitt  // https://www.youtube.com/watch?v=dWsjatPhWHQ video for tetrinarary operators 
 
         Console.Write($"Enter amount to {type}: ");
         double amount;
