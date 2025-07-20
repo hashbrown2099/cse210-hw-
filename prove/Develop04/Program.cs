@@ -17,7 +17,7 @@ abstract class Activity
     protected int duration;
 
     public void Start()
-    // This is a complete method shared by all child classes.
+                   
     // this hdanles the setup
     {
         Console.Clear();                 
@@ -77,18 +77,13 @@ abstract class Activity
     }
 
     public abstract string GetDescription();
-    // This is  abstract method.
+
 
 
     public abstract void Run();
    
 }
-
-
-
-
-
-class BreathingActivity : Activity
+class BreathingsActivity : Activity
 // Inherits from Activity implement Run and GetDescription.
 {
     public override string GetDescription()
@@ -109,11 +104,7 @@ class BreathingActivity : Activity
     }
 }
 
-
-
-
-
-class ReflectionActivity : Activity
+class ReflectionActivity: Activity
 {
     private List<string> prompts = new List<string>
     {
@@ -135,10 +126,9 @@ class ReflectionActivity : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     };
-
     public override string GetDescription()
     {
-        return "This activity will help you reflect on times in your life when you have shown strength and resilience.\nThis will help you recognize the power you have and how you can use it in other aspects of your life.";
+        return "This activity will help you reflect on times in your life when you have shown strength and resilience5 will help you recognize the power you have and how you can use it in other aspects of your life.";
     }
 
     public override void Run()
