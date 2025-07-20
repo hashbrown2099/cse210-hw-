@@ -29,7 +29,7 @@ abstract class Goal
     // Properties (read-only) to allow safe access to private fields
     public string Name => name;
     public int Points => points;
-    public GoalStatus Status => status;
+    public GoalStatus Status => status;// Re look over all the changes made 
 
     // Constructor of  goal
     public Goal(string name, int points)

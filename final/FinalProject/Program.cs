@@ -130,16 +130,16 @@ class SercuritySoftware
             }
             else if (choice == "2")
             {
-                LogIn(); // Call methods  to log in
+                LogIn(); 
             }
             else if (choice == "3")
             {
                 Console.WriteLine("Goodbye");
-                break; // this will exit 
+                break; 
             }
             else
             {
-                Console.WriteLine("Invalid choice. Please enter 1, 2, or 3.");
+                Console.WriteLine("Invalid Please enter 1, 2, or 3.");
             }
         }
     }
